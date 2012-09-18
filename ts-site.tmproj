@@ -8,23 +8,21 @@
 			<key>filename</key>
 			<string>about.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T03:51:06Z</date>
+			<date>2012-09-18T04:27:22Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>cw-website.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T22:42:19Z</date>
+			<date>2012-09-18T04:27:22Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>contact.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:46:03Z</date>
+			<date>2012-09-18T04:27:22Z</date>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>css</string>
 			<key>regexFolderFilter</key>
@@ -36,15 +34,7 @@
 			<key>filename</key>
 			<string>talkover.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:50:28Z</date>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>eat</string>
-			<key>regexFolderFilter</key>
-			<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
-			<key>sourceDirectory</key>
-			<string>eat</string>
+			<date>2012-09-18T04:27:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -54,19 +44,19 @@
 			<key>filename</key>
 			<string>geodesic.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:50:33Z</date>
+			<date>2012-09-18T04:27:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>gh.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T22:04:34Z</date>
+			<date>2012-09-18T04:27:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>hh.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T22:04:36Z</date>
+			<date>2012-09-18T04:27:23Z</date>
 		</dict>
 		<dict>
 			<key>expanded</key>
@@ -82,69 +72,73 @@
 			<key>filename</key>
 			<string>adobe.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T03:51:07Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2012-09-18T04:27:24Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>dosa-new.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:52:16Z</date>
+			<date>2012-09-18T04:27:24Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>cw-branding.html</string>
+			<string>cw-widgets.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T03:43:52Z</date>
+			<date>2012-09-18T04:40:23Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>index.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T03:43:52Z</date>
+			<date>2012-09-18T04:35:24Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>inf-arc.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:50:33Z</date>
+			<date>2012-09-18T04:27:22Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>napo.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:50:33Z</date>
+			<date>2012-09-18T04:27:22Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>odc.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:54:06Z</date>
+			<date>2012-09-18T04:27:21Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>sd.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T22:04:35Z</date>
+			<date>2012-09-18T04:27:21Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>tahera.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T22:04:35Z</date>
+			<date>2012-09-18T04:27:21Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>web.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T21:50:32Z</date>
+			<date>2012-09-18T04:27:20Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>yoga-sutras.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-17T22:04:36Z</date>
+			<date>2012-09-18T04:27:19Z</date>
+		</dict>
+		<dict>
+			<key>filename</key>
+			<string>cw-branding.html</string>
+			<key>lastUsed</key>
+			<date>2012-09-18T04:40:22Z</date>
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>

@@ -8,13 +8,15 @@
 			<key>filename</key>
 			<string>about.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T04:27:22Z</date>
+			<date>2012-09-18T19:15:07Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
 			<string>cw-website.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T04:27:22Z</date>
+			<date>2012-09-18T19:15:08Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -34,7 +36,7 @@
 			<key>filename</key>
 			<string>talkover.html</string>
 			<key>lastUsed</key>
-			<date>2012-09-18T04:27:23Z</date>
+			<date>2012-09-18T19:08:18Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -59,8 +61,6 @@
 			<date>2012-09-18T04:27:23Z</date>
 		</dict>
 		<dict>
-			<key>expanded</key>
-			<true/>
 			<key>name</key>
 			<string>images</string>
 			<key>regexFolderFilter</key>

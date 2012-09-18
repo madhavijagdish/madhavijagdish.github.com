@@ -1,4 +1,4 @@
-html { min-height: 100%; margin-bottom: 1px; overflow: -moz-scrollbars-vertical; } 
+html { height: 100%; margin-bottom: 1px; overflow: -moz-scrollbars-vertical; } 
 
 p {
 	margin: 0;
@@ -35,15 +35,16 @@ a:active {
 }
 
 body{
+  height: 100%;
 	padding: 0;
  	margin: 0;
-  	background:#F4F4F4;
-  	width: 100%;
+  background:#F4F4F4;
+  width: 100%;
 }
 
 .container{
 	background:url('../../images/bkg4b.jpg') repeat-y center top;
-	height: 4000px;
+	min-height: 100%;
 }
 
 #header {

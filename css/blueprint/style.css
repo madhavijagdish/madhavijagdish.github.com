@@ -48,11 +48,14 @@ body{
 }
 
 #header {
-	background:url('../../images/ts-header.jpg');
 	background-position: center;
 	height: 100px;
 	width: 940px;
 	margin-left: 4px;
+}
+
+hr {
+	border: 1px solid #CCC;
 }
 
 #sidebar{
@@ -118,14 +121,12 @@ text-transform:uppercase;
 .headline-large{
 font-size:24px;
 color:#000;
-letter-spacing: 2px;
-text-transform:uppercase;
 padding: 10px 10px 3px 0;
 }
 
 .headline-med{
 font-size:12px;
-color:#000;
+color:#999;
 letter-spacing: 2px;
 text-transform:uppercase;
 padding: 0 10px 0 0;
@@ -133,7 +134,7 @@ padding: 0 10px 0 0;
 
 .headline-med2{
 font-size:12px;
-color:#999;
+color:#000;
 letter-spacing: 2px;
 text-transform:uppercase;
 padding: 0 10px 10px 0;

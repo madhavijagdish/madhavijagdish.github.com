@@ -1,0 +1,489 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+@import "colors";
+
+/*
+VARIABLES AND MIXINS
+*/
+$gp-lightest-red: #f7edec;
+
+@mixin triangle-up($color, $size, $widthMultiplier: 1){
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid transparent;
+    border-bottom: $size * $widthMultiplier solid $color;
+}
+
+@mixin triangle-left($color, $size, $widthMultiplier: 1){
+    width: 0;
+    height: 0;
+    border-right: $size * $widthMultiplier solid $color;
+    border-bottom: $size solid transparent;
+    border-top: $size solid transparent;
+}
+
+@mixin grey-gradient{
+    @include background-image(linear-gradient($gp-lightest-grey, $gp-light-grey));
+}
+
+/*
+FONTS
+*/
+
+@font-face {
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-style: normal;
+    src: url('/assets/OpenSans-Regular.eot');
+    src: local("☺"), url("/assets/OpenSans-Regular.woff") format("woff"), url("/assets/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-weight: 600;
+	font-style: normal;
+    src: url('/assets/OpenSans-Semibold.eot');
+    src: local("☺"), url("/assets/OpenSans-Semibold.woff") format("woff"), url("/assets/OpenSans-Semibold.ttf") format("truetype");
+}
+
+/*
+DEFAULT ELEMENTS
+*/
+
+html, input {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+
+    font-size: 10pt;
+    font-family: "Open Sans", Verdana, serif;
+}
+
+
+a {
+    color: $gp-dark-teal;
+    text-transform: none;
+    text-decoration: none;
+}
+
+nav {
+    display: -webkit-box;
+    -webkit-box-orient:horizontal;
+}
+
+nav a {
+    color: $gp-darker-blue-grey;
+    width: 100px;
+    display:inline-block;
+    -webkit-box-flex:1;
+    text-align:center;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+pre {
+    text-indent: 0;
+}
+/*
+STYLE GUIDE STYLES
+*/
+
+.style_guide {
+    margin: 20px;
+}
+
+.style_guide_header {
+    margin: 50px 0 0 0;
+    font-weight: bold;
+}
+
+.style_container {
+    width: 1500px;
+}
+
+.column-left{
+    width: 45%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.column-right {
+    width: 50%;
+    float: right;
+    font-family: "Courier New", Courier, monospace;
+    color: $gp-darker-grey;
+    border: 1px solid $gp-lighter-grey;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+}
+
+/*
+TYPOGRAPHY
+*/
+
+.title {
+    color: $gp-black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: $gp-dark-teal;
+    font-weight: 600;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.grey-subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $gp-darker-blue-grey;
+}
+
+.section-header {
+    color: $gp-dark-teal;
+    font-weight: 600;
+    background-color: $gp-lightest-blue;
+    padding: 5px;
+}
+
+/*
+TOOLTIPS
+*/
+
+.black-tooltip {
+    z-index: 100;
+    position: absolute;
+    color: $gp-light-grey;
+    padding: 8px;
+    @include border-radius(3px);
+    background-color: rgba($gp-black, 0.75);
+    .triangle {
+        position: absolute;
+    &.fill {
+       top: 20px;
+       right: 330px;
+       @include opacity (0.75);
+       @include triangle-left($gp-black, 10px, 1.2);
+       }
+    }
+}
+
+.white-tooltip-top {
+    z-index: 100;
+    position: absolute;
+    margin: 0;
+    margin-top: 10px;
+    border: 2px solid $gp-light-grey;
+    background-color: $gp-white;
+    @include border-radius(3px);
+    @include box-shadow($gp-lighter-grey 2px 2px 10px);
+
+    p {
+        margin: 0;
+        padding: 15px;
+        color: $gp-black;
+        }
+}
+.triangle {
+    position: absolute;
+
+    &.border {
+        top: -22px;
+        right: 10px;
+        @include triangle-up($gp-grey, 10px, 1.2);
+    }
+
+     &.fill {
+        top: -19px;
+        right: 10px;
+        @include triangle-up($gp-white, 10px, 1.2);
+    }
+}
+
+.white-tooltip {
+    @extend .white-tooltip-top
+}
+.triangle-side {
+    position: absolute;
+
+    &.border {
+        top: 14px;
+        right: 346px;
+        @include triangle-left($gp-grey, 10px, 1.2);
+    }
+
+     &.fill {
+        top: 14px;
+        right: 343px;
+        @include triangle-left($gp-white, 10px, 1.2);
+    }
+}
+
+.gradient-tooltip {
+    z-index: 100;
+    position: absolute;
+    margin: 0;
+    margin-top: 10px;
+    color: $gp-black;
+    padding: 8px;
+    background-color: $gp-lightest-grey;
+    @include background-image(linear-gradient($gp-lightest-grey, $gp-light-grey));
+    
+    text-shadow:0 1px 1px white;
+    
+    @include border-radius(3px);
+    border: 1px solid $gp-grey;
+
+    p {
+        margin: 0;
+        padding: 15px;
+        color: $gp-black;
+        }
+}
+.gradient-triangle {
+    position: absolute;
+
+    &.border {
+        top: -21px;
+        right: 180px;
+        @include triangle-up($gp-grey, 10px, 1.1);
+    }
+
+     &.fill {
+        top: -19px;
+        right: 180px;
+        @include triangle-up($gp-lightest-grey, 10px, 1);
+    }
+}
+
+/*
+ELEMENTS
+*/
+
+.anchor-links {
+    background-color: $gp-lightest-blue-grey;
+    height: 30px;
+    padding:5px;
+}
+
+.anchor-link-active {
+    padding:0 5px;
+    background-color: $gp-white;
+    @include border-radius(15px);
+    @extend .subtitle;
+}
+
+.blue-tag {
+    @include border-radius(3px);
+    width: 100px;
+    float:left;
+    padding:5px;
+    
+    color: $gp-dark-teal;
+    background-color: $gp-lightest-blue-grey;
+    border: 1px solid $gp-dark-teal;
+    
+}
+
+.red-tag {
+    @extend .blue-tag;
+    color: $gp-red;
+    background-color: $gp-lightest-red;
+    border: 1px solid $gp-red;
+}
+.tag-x {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.subtitle-bkg {
+        height: 30px;
+        padding: 0 10px;
+        border-bottom: 1px solid $gp-dark-blue-grey;
+        @include background-image(linear-gradient($gp-white, $gp-lightest-blue, $gp-lighter-blue));
+        @include box-shadow($gp-lighter-grey -1px -1px 1px 0px);
+}
+
+/*
+BUTTONS
+*/
+
+.grey-button {
+    a {
+        color: $gp-darker-grey;
+    }
+    background-color: $gp-lightest-grey;
+    @include background-image(linear-gradient($gp-lightest-grey, $gp-light-grey));
+    
+    text-shadow:0 1px 1px white;
+    
+    @include border-radius(3px);
+    border: 1px solid $gp-grey;
+    
+    height: 30px;
+    padding: 0 15px;
+    
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    
+    &:hover {
+        @include background-image(linear-gradient($gp-lightest-grey, $gp-lighter-grey));
+    }
+}
+
+button {
+    border: 1px solid $gp-darker-grey;
+    @include border-radius(3px);
+
+    &.gp_button {
+        cursor: pointer;
+        height: 30px;
+        padding: 0 15px;
+        
+        @extend .subtitle;
+        font-size: 14px;
+        line-height: 28px;
+        
+        background-color: $gp-white;
+        @include border-radius(0px);
+        border: 1px solid $gp-lighter-grey;
+        
+        &:hover{
+        @include box-shadow($gp-lighter-grey 0 0 3px 4px);
+        }
+
+        &:disabled {
+            cursor: default;
+            color: $gp-grey;
+            @include box-shadow(none);
+        }
+    }
+}
+
+/*
+FORM ELEMENTS
+*/
+select {
+    width: 220px;
+    border: 1px solid $gp-lighter-grey;
+    background: $gp-white;
+    height: 30px;
+    line-height: 30px;
+    color: $gp-darker-grey;
+}
+
+textarea {
+    border: 1px solid $gp-lighter-grey;
+    width: 300px;
+    height: 150px;
+}
+
+.field-short {
+	height: 30px;
+	border: 1px solid $gp-light-grey;
+    
+    color: $gp-darker-grey;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	
+    padding: 0 0 0 10px;
+	margin: 0;
+}
+
+.add-on { 
+    width: 95px;
+    height: 30px;
+    display: inline-block;
+    min-width: 16px;
+    padding: 0px 5px;
+    
+    font-size: 10px;
+    color: $gp-dark-grey;
+    line-height: 32px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    
+    background-color: $gp-lightest-grey;
+    border: 1px solid $gp-light-grey;
+    margin-left: -1px;
+}
+
+
+/*
+GRAPHS
+*/
+
+.success{
+        width: 200px;
+        height: 10px;
+        @include background-image(linear-gradient($gp-light-green, $gp-green));
+        float: left;
+}
+
+.failure{
+        width: 50px;
+        height: 10px;
+        @include background-image(linear-gradient($gp-light-red, $gp-red));
+        float: left;
+}
+
+.verification-bar {
+    width: 400px;
+    height: 10px;
+    background-color: $gp-lighter-grey;
+    float:left;
+}
+
+.progressbar{
+    width:600px;
+    height:16px;
+    
+    background:$gp-grey;
+    border-width:1px;
+    border-style:solid;
+    border-color: #aaa #bbb #fff #bbb;    
+    box-shadow:inset 0px 2px 3px $gp-grey;    
+}
+
+.progressbar,
+.progressbar-inner{
+    @include border-radius(3px)
+}
+
+.progressbar-inner{
+    width:65%; /* Change to actual percentage */
+    height:100%;
+    background:#999;
+    background-color: #ac0; 
+    box-shadow:inset 0px 2px 8px rgba(255, 255, 255, .5), inset -1px -1px 0px rgba(0, 0, 0, .2);
+}
+
+/*
+ * Color Options
+ */
+.progressbar-green .progressbar-inner{
+    background-color:#ac0;
+    width:60%;
+}

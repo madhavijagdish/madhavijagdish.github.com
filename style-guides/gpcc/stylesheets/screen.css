@@ -1,0 +1,580 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*
+VARIABLES AND MIXINS
+*/
+/*
+FONTS
+*/
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/OpenSans-Regular.eot");
+  src: local("☺"), url("/assets/OpenSans-Regular.woff") format("woff"), url("/assets/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: url("/assets/OpenSans-Semibold.eot");
+  src: local("☺"), url("/assets/OpenSans-Semibold.woff") format("woff"), url("/assets/OpenSans-Semibold.ttf") format("truetype");
+}
+
+/*
+DEFAULT ELEMENTS
+*/
+/* line 59, ../sass/screen.scss */
+html, input {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 64, ../sass/screen.scss */
+body {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  font-size: 10pt;
+  font-family: "Open Sans", Verdana, serif;
+}
+
+/* line 76, ../sass/screen.scss */
+a {
+  color: #339fe1;
+  text-transform: none;
+  text-decoration: none;
+}
+
+/* line 82, ../sass/screen.scss */
+nav {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+
+/* line 87, ../sass/screen.scss */
+nav a {
+  color: #8a8e9e;
+  width: 100px;
+  display: inline-block;
+  -webkit-box-flex: 1;
+  text-align: center;
+}
+
+/* line 95, ../sass/screen.scss */
+hr {
+  margin-bottom: 20px;
+}
+
+/* line 99, ../sass/screen.scss */
+pre {
+  text-indent: 0;
+}
+
+/*
+STYLE GUIDE STYLES
+*/
+/* line 106, ../sass/screen.scss */
+.style_guide {
+  margin: 20px;
+}
+
+/* line 110, ../sass/screen.scss */
+.style_guide_header {
+  margin: 50px 0 0 0;
+  font-weight: bold;
+}
+
+/* line 115, ../sass/screen.scss */
+.style_container {
+  width: 1500px;
+}
+
+/* line 119, ../sass/screen.scss */
+.column-left {
+  width: 45%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+/* line 125, ../sass/screen.scss */
+.column-right {
+  width: 50%;
+  float: right;
+  font-family: "Courier New", Courier, monospace;
+  color: #777777;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+/*
+TYPOGRAPHY
+*/
+/* line 140, ../sass/screen.scss */
+.title {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 146, ../sass/screen.scss */
+.subtitle, .anchor-link-active, button.gp_button {
+  color: #339fe1;
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+/* line 153, ../sass/screen.scss */
+.grey-subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #8a8e9e;
+}
+
+/* line 159, ../sass/screen.scss */
+.section-header {
+  color: #339fe1;
+  font-weight: 600;
+  background-color: #f7fafd;
+  padding: 5px;
+}
+
+/*
+TOOLTIPS
+*/
+/* line 170, ../sass/screen.scss */
+.black-tooltip {
+  z-index: 100;
+  position: absolute;
+  color: #c1c1c1;
+  padding: 8px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+/* line 177, ../sass/screen.scss */
+.black-tooltip .triangle {
+  position: absolute;
+}
+/* line 179, ../sass/screen.scss */
+.black-tooltip .triangle.fill {
+  top: 20px;
+  right: 330px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
+  width: 0;
+  height: 0;
+  border-right: 12px solid black;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+
+/* line 188, ../sass/screen.scss */
+.white-tooltip-top, .white-tooltip {
+  z-index: 100;
+  position: absolute;
+  margin: 0;
+  margin-top: 10px;
+  border: 2px solid #c1c1c1;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: lightgrey 2px 2px 10px;
+  -moz-box-shadow: lightgrey 2px 2px 10px;
+  box-shadow: lightgrey 2px 2px 10px;
+}
+/* line 198, ../sass/screen.scss */
+.white-tooltip-top p, .white-tooltip p {
+  margin: 0;
+  padding: 15px;
+  color: black;
+}
+
+/* line 204, ../sass/screen.scss */
+.triangle {
+  position: absolute;
+}
+/* line 207, ../sass/screen.scss */
+.triangle.border {
+  top: -22px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 12px solid #b5b5b5;
+}
+/* line 213, ../sass/screen.scss */
+.triangle.fill {
+  top: -19px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 12px solid white;
+}
+
+/* line 223, ../sass/screen.scss */
+.triangle-side {
+  position: absolute;
+}
+/* line 226, ../sass/screen.scss */
+.triangle-side.border {
+  top: 14px;
+  right: 346px;
+  width: 0;
+  height: 0;
+  border-right: 12px solid #b5b5b5;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+/* line 232, ../sass/screen.scss */
+.triangle-side.fill {
+  top: 14px;
+  right: 343px;
+  width: 0;
+  height: 0;
+  border-right: 12px solid white;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+}
+
+/* line 239, ../sass/screen.scss */
+.gradient-tooltip {
+  z-index: 100;
+  position: absolute;
+  margin: 0;
+  margin-top: 10px;
+  color: black;
+  padding: 8px;
+  background-color: #f6f6f6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(100%, #c1c1c1));
+  background-image: -webkit-linear-gradient(#f6f6f6, #c1c1c1);
+  background-image: -moz-linear-gradient(#f6f6f6, #c1c1c1);
+  background-image: -o-linear-gradient(#f6f6f6, #c1c1c1);
+  background-image: linear-gradient(#f6f6f6, #c1c1c1);
+  text-shadow: 0 1px 1px white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #b5b5b5;
+}
+/* line 254, ../sass/screen.scss */
+.gradient-tooltip p {
+  margin: 0;
+  padding: 15px;
+  color: black;
+}
+
+/* line 260, ../sass/screen.scss */
+.gradient-triangle {
+  position: absolute;
+}
+/* line 263, ../sass/screen.scss */
+.gradient-triangle.border {
+  top: -21px;
+  right: 180px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 11px solid #b5b5b5;
+}
+/* line 269, ../sass/screen.scss */
+.gradient-triangle.fill {
+  top: -19px;
+  right: 180px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #f6f6f6;
+}
+
+/*
+ELEMENTS
+*/
+/* line 280, ../sass/screen.scss */
+.anchor-links {
+  background-color: #e9eff5;
+  height: 30px;
+  padding: 5px;
+}
+
+/* line 286, ../sass/screen.scss */
+.anchor-link-active {
+  padding: 0 5px;
+  background-color: white;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* line 293, ../sass/screen.scss */
+.blue-tag, .red-tag {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  width: 100px;
+  float: left;
+  padding: 5px;
+  color: #339fe1;
+  background-color: #e9eff5;
+  border: 1px solid #339fe1;
+}
+
+/* line 305, ../sass/screen.scss */
+.red-tag {
+  color: #ce160d;
+  background-color: #f7edec;
+  border: 1px solid #ce160d;
+}
+
+/* line 311, ../sass/screen.scss */
+.tag-x {
+  float: right;
+}
+
+/* line 315, ../sass/screen.scss */
+.clear {
+  clear: both;
+}
+
+/* line 319, ../sass/screen.scss */
+.subtitle-bkg {
+  height: 30px;
+  padding: 0 10px;
+  border-bottom: 1px solid #c0ccd6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(50%, #f7fafd), color-stop(100%, #dfeff9));
+  background-image: -webkit-linear-gradient(#ffffff, #f7fafd, #dfeff9);
+  background-image: -moz-linear-gradient(#ffffff, #f7fafd, #dfeff9);
+  background-image: -o-linear-gradient(#ffffff, #f7fafd, #dfeff9);
+  background-image: linear-gradient(#ffffff, #f7fafd, #dfeff9);
+  -webkit-box-shadow: lightgrey -1px -1px 1px 0px;
+  -moz-box-shadow: lightgrey -1px -1px 1px 0px;
+  box-shadow: lightgrey -1px -1px 1px 0px;
+}
+
+/*
+BUTTONS
+*/
+/* line 331, ../sass/screen.scss */
+.grey-button {
+  background-color: #f6f6f6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(100%, #c1c1c1));
+  background-image: -webkit-linear-gradient(#f6f6f6, #c1c1c1);
+  background-image: -moz-linear-gradient(#f6f6f6, #c1c1c1);
+  background-image: -o-linear-gradient(#f6f6f6, #c1c1c1);
+  background-image: linear-gradient(#f6f6f6, #c1c1c1);
+  text-shadow: 0 1px 1px white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #b5b5b5;
+  height: 30px;
+  padding: 0 15px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+}
+/* line 332, ../sass/screen.scss */
+.grey-button a {
+  color: #777777;
+}
+/* line 350, ../sass/screen.scss */
+.grey-button:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(100%, #d3d3d3));
+  background-image: -webkit-linear-gradient(#f6f6f6, #d3d3d3);
+  background-image: -moz-linear-gradient(#f6f6f6, #d3d3d3);
+  background-image: -o-linear-gradient(#f6f6f6, #d3d3d3);
+  background-image: linear-gradient(#f6f6f6, #d3d3d3);
+}
+
+/* line 355, ../sass/screen.scss */
+button {
+  border: 1px solid #777777;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 359, ../sass/screen.scss */
+button.gp_button {
+  cursor: pointer;
+  height: 30px;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 28px;
+  background-color: white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  border: 1px solid lightgrey;
+}
+/* line 372, ../sass/screen.scss */
+button.gp_button:hover {
+  -webkit-box-shadow: lightgrey 0 0 3px 4px;
+  -moz-box-shadow: lightgrey 0 0 3px 4px;
+  box-shadow: lightgrey 0 0 3px 4px;
+}
+/* line 376, ../sass/screen.scss */
+button.gp_button:disabled {
+  cursor: default;
+  color: #b5b5b5;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/*
+FORM ELEMENTS
+*/
+/* line 387, ../sass/screen.scss */
+select {
+  width: 220px;
+  border: 1px solid lightgrey;
+  background: white;
+  height: 30px;
+  line-height: 30px;
+  color: #777777;
+}
+
+/* line 396, ../sass/screen.scss */
+textarea {
+  border: 1px solid lightgrey;
+  width: 300px;
+  height: 150px;
+}
+
+/* line 402, ../sass/screen.scss */
+.field-short {
+  height: 30px;
+  border: 1px solid #c1c1c1;
+  color: #777777;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0 0 0 10px;
+  margin: 0;
+}
+
+/* line 414, ../sass/screen.scss */
+.add-on {
+  width: 95px;
+  height: 30px;
+  display: inline-block;
+  min-width: 16px;
+  padding: 0px 5px;
+  font-size: 10px;
+  color: #969593;
+  line-height: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #f6f6f6;
+  border: 1px solid #c1c1c1;
+  margin-left: -1px;
+}
+
+/*
+GRAPHS
+*/
+/* line 438, ../sass/screen.scss */
+.success {
+  width: 200px;
+  height: 10px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7cbf00), color-stop(100%, #1e8a05));
+  background-image: -webkit-linear-gradient(#7cbf00, #1e8a05);
+  background-image: -moz-linear-gradient(#7cbf00, #1e8a05);
+  background-image: -o-linear-gradient(#7cbf00, #1e8a05);
+  background-image: linear-gradient(#7cbf00, #1e8a05);
+  float: left;
+}
+
+/* line 445, ../sass/screen.scss */
+.failure {
+  width: 50px;
+  height: 10px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d56569), color-stop(100%, #ce160d));
+  background-image: -webkit-linear-gradient(#d56569, #ce160d);
+  background-image: -moz-linear-gradient(#d56569, #ce160d);
+  background-image: -o-linear-gradient(#d56569, #ce160d);
+  background-image: linear-gradient(#d56569, #ce160d);
+  float: left;
+}
+
+/* line 452, ../sass/screen.scss */
+.verification-bar {
+  width: 400px;
+  height: 10px;
+  background-color: lightgrey;
+  float: left;
+}
+
+/* line 459, ../sass/screen.scss */
+.progressbar {
+  width: 600px;
+  height: 16px;
+  background: #b5b5b5;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa #bbb #fff #bbb;
+  box-shadow: inset 0px 2px 3px #b5b5b5;
+}
+
+/* line 471, ../sass/screen.scss */
+.progressbar,
+.progressbar-inner {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 475, ../sass/screen.scss */
+.progressbar-inner {
+  width: 65%;
+  /* Change to actual percentage */
+  height: 100%;
+  background: #999;
+  background-color: #ac0;
+  box-shadow: inset 0px 2px 8px rgba(255, 255, 255, 0.5), inset -1px -1px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*
+ * Color Options
+ */
+/* line 486, ../sass/screen.scss */
+.progressbar-green .progressbar-inner {
+  background-color: #ac0;
+  width: 60%;
+}
